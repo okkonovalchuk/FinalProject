@@ -1,12 +1,516 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1440" />
+  <title>Dwello — Find Your Dream Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    
+  <!-- Top Band: Header + Hero -->
+  <div class="hero-band">
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#" class="logo" aria-label="Dwello Home">
+          <span class="logo__mark" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M3 10.5L12 3L21 10.5V20.5H3V10.5Z" stroke="#2B1B12" stroke-width="2.2" stroke-linejoin="round" />
+              <path d="M9.5 20.5V13.5H14.5V20.5" stroke="#2B1B12" stroke-width="2.2" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="logo__text">Dwello</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary Navigation">
+          <a href="#home" class="nav__link">Home</a>
+          <a href="#service" class="nav__link">Service</a>
+          <a href="#agents" class="nav__link">Agents</a>
+          <a href="#contact" class="nav__link">Contact</a>
+        </nav>
+
+        <div class="header__actions">
+          <button type="button" class="icon-btn" aria-label="Search">
+            <i data-lucide="search"></i>
+          </button>
+          <button type="button" class="icon-btn" aria-label="User Profile">
+            <i data-lucide="user"></i>
+          </button>
+          <a href="#signup" class="btn btn--primary btn--sm">Sign up</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1 class="hero__title">Find Your<br />Dream Home</h1>
+          <p class="hero__subtitle">
+            Explore our curated selection of exquisite properties meticulously tailored to your unique dream home vision
+          </p>
+          <a href="#signup" class="btn btn--primary btn--md">Sign up</a>
+        </div>
+
+        <div class="hero__visual">
+          <img
+            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80"
+            alt="Modern multi-story luxury residence"
+            class="hero__img"
+          />
+        </div>
+      </div>
+
+      <div class="container">
+        <form class="search-bar" action="#" method="get" aria-label="Property Search">
+          <div class="search-bar__field">
+            <input
+              type="text"
+              name="location"
+              placeholder="Location"
+              aria-label="Location"
+              class="search-bar__input"
+            />
+            <i data-lucide="map-pin" class="search-bar__icon"></i>
+          </div>
+
+          <div class="search-bar__field">
+            <input
+              type="text"
+              name="type"
+              placeholder="Type"
+              aria-label="Type"
+              class="search-bar__input"
+            />
+            <i data-lucide="home" class="search-bar__icon"></i>
+          </div>
+
+          <div class="search-bar__field">
+            <input
+              type="text"
+              name="price"
+              placeholder="Price Range"
+              aria-label="Price Range"
+              class="search-bar__input"
+            />
+            <i data-lucide="circle-dollar-sign" class="search-bar__icon"></i>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--md search-bar__btn">Sign up</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <main>
+    <!-- About / Stats Section -->
+    <section id="service" class="about section">
+      <div class="container about__grid">
+        <div class="about__media">
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80"
+            alt="Modern house with swimming pool at dusk"
+            class="about__img"
+          />
+        </div>
+
+        <div class="about__content">
+          <h2 class="section-title about__title">We Help You To Find<br />Your Dream Home</h2>
+          <p class="about__text">
+            From cozy cottages to luxurious estates, our dedicated team guides you through every step of the journey, ensuring your dream home becomes a reality
+          </p>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat__number">8K+</div>
+              <div class="stat__label">Houses Available</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number">6K+</div>
+              <div class="stat__label">Houses Sold</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number">2K+</div>
+              <div class="stat__label">Trusted Agents</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Why Choose Us</h2>
+          <p class="section-subtitle">
+            Elevating Your Home Buying Experience with Expertise, Integrity,<br />and Unmatched Personalized Service
+          </p>
+        </div>
+
+        <div class="features__grid">
+          <article class="feature-card">
+            <div class="feature-card__icon-box">
+              <i data-lucide="map-pin"></i>
+            </div>
+            <h3 class="feature-card__title">Expert Guidance</h3>
+            <p class="feature-card__text">
+              Benefit from our team's seasoned expertise for a smooth buying experience
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon-box">
+              <i data-lucide="user-check"></i>
+            </div>
+            <h3 class="feature-card__title">Personalized Service</h3>
+            <p class="feature-card__text">
+              Our services adapt to your unique needs, making your journey stress free
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon-box">
+              <i data-lucide="clipboard-check"></i>
+            </div>
+            <h3 class="feature-card__title">Transparent Process</h3>
+            <p class="feature-card__text">
+              Stay informed with our clear and honest approach to buying your home
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card__icon-box">
+              <i data-lucide="handshake"></i>
+            </div>
+            <h3 class="feature-card__title">Exceptional Support</h3>
+            <p class="feature-card__text">
+              Providing peace of mind with our responsive and attentive customer service
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Popular Residences -->
+    <section id="agents" class="residences section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Popular Residences</h2>
+        </div>
+
+        <div class="residences__grid">
+          <article class="residence-card">
+            <img
+              src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=900&q=80"
+              alt="Residence in San Francisco, California"
+              class="residence-card__img"
+            />
+            <div class="residence-card__body">
+              <div class="residence-card__location">
+                <i data-lucide="map-pin"></i>
+                <span>San Francisco, California</span>
+              </div>
+
+              <div class="residence-card__meta">
+                <span class="residence-card__spec">
+                  <span class="spec-badge"><i data-lucide="door-closed"></i></span>
+                  4 Rooms
+                </span>
+                <span class="residence-card__spec">
+                  <span class="spec-badge"><i data-lucide="maximize-2"></i></span>
+                  3,500 sq ft
+                </span>
+              </div>
+
+              <div class="residence-card__footer">
+                <a href="#signup" class="btn btn--primary btn--sm">Sign up</a>
+                <span class="residence-card__price">$2,500,000</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="residence-card">
+            <img
+              src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80"
+              alt="Residence in Beverly Hills, California"
+              class="residence-card__img"
+            />
+            <div class="residence-card__body">
+              <div class="residence-card__location">
+                <i data-lucide="map-pin"></i>
+                <span>Beverly Hills, California</span>
+              </div>
+
+              <div class="residence-card__meta">
+                <span class="residence-card__spec">
+                  <span class="spec-badge"><i data-lucide="door-closed"></i></span>
+                  3 Rooms
+                </span>
+                <span class="residence-card__spec">
+                  <span class="spec-badge"><i data-lucide="maximize-2"></i></span>
+                  1,500 sq ft
+                </span>
+              </div>
+
+              <div class="residence-card__footer">
+                <a href="#signup" class="btn btn--primary btn--sm">Sign up</a>
+                <span class="residence-card__price">$850,000</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="residence-card">
+            <img
+              src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
+              alt="Residence in Palo Alto, California"
+              class="residence-card__img"
+            />
+            <div class="residence-card__body">
+              <div class="residence-card__location">
+                <i data-lucide="map-pin"></i>
+                <span>Palo Alto, California</span>
+              </div>
+
+              <div class="residence-card__meta">
+                <span class="residence-card__spec">
+                  <span class="spec-badge"><i data-lucide="door-closed"></i></span>
+                  6 Rooms
+                </span>
+                <span class="residence-card__spec">
+                  <span class="spec-badge"><i data-lucide="maximize-2"></i></span>
+                  4,000 sq ft
+                </span>
+              </div>
+
+              <div class="residence-card__footer">
+                <a href="#signup" class="btn btn--primary btn--sm">Sign up</a>
+                <span class="residence-card__price">$3,700,000</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-band section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">What People Say<br />About Dwello</h2>
+        </div>
+
+        <div class="testimonials__grid">
+          <article class="testimonial-card">
+            <img
+              src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+              alt="Bright modern bedroom"
+              class="testimonial-card__room"
+            />
+            <div class="testimonial-card__body">
+              <div class="testimonial-card__author-row">
+                <img
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
+                  alt="Sarah Nguyen"
+                  class="testimonial-card__avatar"
+                />
+                <div class="testimonial-card__author-info">
+                  <div class="testimonial-card__name">Sarah Nguyen</div>
+                  <div class="testimonial-card__city">San Francisco</div>
+                </div>
+                <div class="rating-badge">
+                  <span class="rating-badge__star">★</span>
+                  <span class="rating-badge__value">5.0</span>
+                </div>
+              </div>
+              <p class="testimonial-card__quote">
+                Dwello truly cares about their clients. They listened to my needs and preferences and helped me find the perfect home in the Bay Area. Their professionalism and attention to detail are unmatched.
+              </p>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <img
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80"
+              alt="Spacious living and dining area"
+              class="testimonial-card__room"
+            />
+            <div class="testimonial-card__body">
+              <div class="testimonial-card__author-row">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+                  alt="Michael Rodriguez"
+                  class="testimonial-card__avatar"
+                />
+                <div class="testimonial-card__author-info">
+                  <div class="testimonial-card__name">Michael Rodriguez</div>
+                  <div class="testimonial-card__city">San Diego</div>
+                </div>
+                <div class="rating-badge">
+                  <span class="rating-badge__star">★</span>
+                  <span class="rating-badge__value">4.5</span>
+                </div>
+              </div>
+              <p class="testimonial-card__quote">
+                I had a fantastic experience working with Dwello. Their expertise and personalized service exceeded my expectations. I found my dream home quickly and smoothly. Highly recommended!
+              </p>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <img
+              src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=900&q=80"
+              alt="Cozy minimalist bedroom"
+              class="testimonial-card__room"
+            />
+            <div class="testimonial-card__body">
+              <div class="testimonial-card__author-row">
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
+                  alt="Emily Johnson"
+                  class="testimonial-card__avatar"
+                />
+                <div class="testimonial-card__author-info">
+                  <div class="testimonial-card__name">Emily Johnson</div>
+                  <div class="testimonial-card__city">Los Angeles</div>
+                </div>
+                <div class="rating-badge">
+                  <span class="rating-badge__star">★</span>
+                  <span class="rating-badge__value">5.0</span>
+                </div>
+              </div>
+              <p class="testimonial-card__quote">
+                Dwello made my dream of owning a home a reality! Their team provided exceptional support and guided me through every step of the process. I couldn't be happier with my new home!
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="carousel-arrows" aria-label="Testimonial Navigation">
+          <button type="button" class="carousel-arrow" aria-label="Previous testimonials">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button type="button" class="carousel-arrow" aria-label="Next testimonials">
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Questions / Newsletter Section -->
+    <section id="contact" class="help section">
+      <div class="container help__inner">
+        <h2 class="section-title help__title">Do You Have Any Questions?<br />Get Help From Us</h2>
+
+        <div class="help__links">
+          <a href="#chat" class="help__link">
+            <span class="help__check"><i data-lucide="check"></i></span>
+            <span>Chat live with our support team</span>
+          </a>
+          <a href="#faq" class="help__link">
+            <span class="help__check"><i data-lucide="check"></i></span>
+            <span>Browse our FAQ</span>
+          </a>
+        </div>
+
+        <form class="newsletter-form" action="#" method="post">
+          <div class="newsletter-form__input-wrap">
+            <i data-lucide="mail" class="newsletter-form__icon"></i>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address..."
+              aria-label="Enter your email address"
+              class="newsletter-form__input"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn--primary btn--md newsletter-form__btn">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#" class="logo footer__logo" aria-label="Dwello Home">
+          <span class="logo__mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M3 10.5L12 3L21 10.5V20.5H3V10.5Z" stroke="#2B1B12" stroke-width="2.2" stroke-linejoin="round" />
+              <path d="M9.5 20.5V13.5H14.5V20.5" stroke="#2B1B12" stroke-width="2.2" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="logo__text">Dwello</span>
+        </a>
+        <p class="footer__tagline">
+          Bringing you closer to<br />your dream home, one<br />click at a time.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">About</h3>
+        <ul class="footer__list">
+          <li><a href="#our-story" class="footer__link">Our Story</a></li>
+          <li><a href="#careers" class="footer__link">Careers</a></li>
+          <li><a href="#our-team" class="footer__link">Our Team</a></li>
+          <li><a href="#resources" class="footer__link">Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Support</h3>
+        <ul class="footer__list">
+          <li><a href="#faq" class="footer__link">FAQ</a></li>
+          <li><a href="#contact" class="footer__link">Contact Us</a></li>
+          <li><a href="#help-center" class="footer__link">Help Center</a></li>
+          <li><a href="#terms" class="footer__link">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Find Us</h3>
+        <ul class="footer__list">
+          <li><a href="#events" class="footer__link">Events</a></li>
+          <li><a href="#locations" class="footer__link">Locations</a></li>
+          <li><a href="#newsletter" class="footer__link">Newsletter</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3 class="footer__heading">Our Social</h3>
+        <ul class="footer__list">
+          <li>
+            <a href="#instagram" class="footer__link footer__social-link">
+              <span class="footer__social-icon"><i data-lucide="instagram"></i></span>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a href="#facebook" class="footer__link footer__social-link">
+              <span class="footer__social-icon"><i data-lucide="facebook"></i></span>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#twitter" class="footer__link footer__social-link">
+              <span class="footer__social-icon"><i data-lucide="twitter"></i></span>
+              <span>Twitter (x)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
