@@ -1,7 +1,7 @@
 :root {
   --bg-page: #ffffff;
-  --bg-warm: #fbf2ea;
-  --bg-sand: #edd8c8;
+  --bg-warm: #FEF7F2;
+  --bg-sand: #DDC7BB;
   --bg-footer: #e7d1c0;
   --ink-primary: #2b1b12;
   --ink-secondary: #4e3b31;
@@ -227,14 +227,16 @@ input {
 .hero__visual {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .hero__img {
   width: 100%;
-  max-width: 680px;
-  height: 430px;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
+  max-width: 720px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+  mix-blend-mode: multiply; /* допомагає білому фону злитися з теплим бежевим фоном секції */
 }
 
 /* Search Bar */
@@ -262,7 +264,7 @@ input {
   padding: 0 42px 0 18px;
   border: none;
   border-radius: var(--radius-sm);
-  background-color: #f7ece4;
+  background-color: #FBF5F1;
   color: var(--ink-primary);
   font-size: 14px;
   font-weight: 500;
@@ -290,14 +292,15 @@ input {
 /* About / Stats */
 .about__grid {
   display: grid;
-  grid-template-columns: 520px 1fr;
+  grid-template-columns: 595px 1fr;
   align-items: center;
   gap: 64px;
 }
 
 .about__img {
-  width: 100%;
-  height: 410px;
+  width: 595px;
+  height: 416px;
+  aspect-ratio: 595 / 416;
   object-fit: cover;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
@@ -379,11 +382,14 @@ input {
 /* Popular Residences */
 .residences__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 382px));
+  justify-content: center;
   gap: 28px;
 }
 
 .residence-card {
+  width: 100%;
+  max-width: 382px;
   background-color: var(--bg-sand);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -392,7 +398,8 @@ input {
 
 .residence-card__img {
   width: 100%;
-  height: 235px;
+  height: 356px;
+  aspect-ratio: 382 / 356;
   object-fit: cover;
 }
 
@@ -467,11 +474,14 @@ input {
 
 .testimonials__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 382px));
+  justify-content: center;
   gap: 28px;
 }
 
 .testimonial-card {
+  width: 100%;
+  max-width: 382px;
   background-color: var(--bg-sand);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -480,7 +490,8 @@ input {
 
 .testimonial-card__room {
   width: 100%;
-  height: 185px;
+  height: 169px;
+  aspect-ratio: 382 / 169;
   object-fit: cover;
 }
 
