@@ -664,7 +664,7 @@ input {
 
 /* Footer */
 .footer {
-  background-color: var(--bg-footer);
+  background-color: #DDC7BB;
   padding: 72px 0;
 }
 
@@ -697,22 +697,29 @@ input {
 
 .footer__link {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ink-secondary);
   transition: color 0.2s ease;
+}
+
+.footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer__social-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .footer__link:hover {
   color: var(--ink-primary);
 }
 
-.footer__social-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.footer__social-icon {
+/*.footer__social-icon {
   width: 22px;
   height: 22px;
   border-radius: 5px;
