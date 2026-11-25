@@ -27,10 +27,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
-  min-width: 1200px;
+  min-width: 0;
+  overflow-x: clip;
   font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: var(--ink-primary);
   background-color: var(--bg-page);
@@ -41,6 +43,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -888,5 +891,168 @@ input {
 
   .auth__img {
     height: 340px;
+  }
+}
+
+
+/* =========================================
+   Адаптивність (Планшети та Смартфони)
+   ========================================= */
+
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .hero__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .hero__title {
+    font-size: 46px;
+  }
+
+  .search-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .features__grid,
+  .residences__grid,
+  .testimonials__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .footer__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Шапка */
+  .header__inner {
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: space-between;
+  }
+
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .nav__link {
+    font-size: 16px;
+  }
+
+  /* Hero */
+  .hero {
+    padding-top: 16px;
+    text-align: center;
+  }
+
+  .hero__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .hero__title {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .hero__subtitle {
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__visual {
+    margin-top: 8px;
+    justify-content: center;
+  }
+
+  /* Форма пошуку */
+  .search-bar {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 16px;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .search-bar__btn {
+    width: 100%;
+  }
+
+  /* About */
+  .about__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    text-align: center;
+  }
+
+  .about__stats {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  /* Заголовки секцій */
+  .section-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  /* Картки переваг, будинків та відгуків — рівно в 1 колонку */
+ .features__grid,
+  .residences__grid,
+  .testimonials__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .residence-card,
+  .feature-card,
+  .testimonial-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Контакти / підписка */
+  .cta__options {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .cta__form {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta__input,
+  .cta__btn {
+    width: 100%;
+  }
+
+  /* Футер */
+  .footer__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
   }
 }
