@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dwello — Sign Up / Log In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="logo">
+        <i data-lucide="home" class="logo__icon"></i>
+        <span>Dwello</span>
+      </a>
+
+      <nav class="nav">
+        <a href="../index.html" class="nav__link">Home</a>
+        <a href="catalog.html" class="nav__link">Service</a>
+        <a href="agents.html" class="nav__link">Agents</a>
+        <a href="../index.html#contact" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="catalog.html" class="icon-btn" aria-label="Search">
+          <i data-lucide="search"></i>
+        </a>
+        <a href="signup.html" class="icon-btn" aria-label="Profile">
+          <i data-lucide="user"></i>
+        </a>
+        <a href="signup.html" class="btn btn--sm">Sign up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Auth Section -->
+  <main class="auth">
+    <div class="container auth__grid">
+
+      <!-- Ліва частина: фото та короткий текст -->
+      <div class="auth__visual">
+        <img src="../img/Group 11.png" alt="Modern luxury home" class="auth__img" />
+        <div class="auth__badge">
+          <h2>Find Your Dream Home</h2>
+          <p>Create an account to save favorite properties and schedule private tours with our agents.</p>
+        </div>
+      </div>
+
+      <!-- Права частина: картка з перемикачем Sign Up / Log In -->
+      <div class="auth__card">
+        <input type="radio" name="auth-tab" id="tab-signup" class="auth__radio" checked />
+        <input type="radio" name="auth-tab" id="tab-login" class="auth__radio" />
+
+        <div class="auth__tabs">
+          <label for="tab-signup" class="auth__tab">Sign up</label>
+          <label for="tab-login" class="auth__tab">Log in</label>
+        </div>
+
+        <!-- Форма реєстрації (Sign Up) -->
+        <form action="../index.html" class="auth__form auth__form--signup">
+          <h1 class="auth__title">Create Account</h1>
+          <p class="auth__subtitle">Join Dwello to start your home buying journey</p>
+
+          <div class="auth__field">
+            <label for="signup-name" class="auth__label">Full Name</label>
+            <input type="text" id="signup-name" class="auth__input" placeholder="Sarah Nguyen" required />
+          </div>
+
+          <div class="auth__field">
+            <label for="signup-email" class="auth__label">Email Address</label>
+            <input type="email" id="signup-email" class="auth__input" placeholder="sarah@example.com" required />
+          </div>
+
+          <div class="auth__field">
+            <label for="signup-pass" class="auth__label">Password</label>
+            <input type="password" id="signup-pass" class="auth__input" placeholder="••••••••" required />
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--md auth__submit">Sign up</button>
+        </form>
+
+        <!-- Форма входу (Log In) -->
+        <form action="../index.html" class="auth__form auth__form--login">
+          <h1 class="auth__title">Welcome Back</h1>
+          <p class="auth__subtitle">Log in to access your saved homes and tours</p>
+
+          <div class="auth__field">
+            <label for="login-email" class="auth__label">Email Address</label>
+            <input type="email" id="login-email" class="auth__input" placeholder="sarah@example.com" required />
+          </div>
+
+          <div class="auth__field">
+            <label for="login-pass" class="auth__label">Password</label>
+            <input type="password" id="login-pass" class="auth__input" placeholder="••••••••" required />
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--md auth__submit">Log in</button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="../index.html" class="logo">
+          <i data-lucide="home" class="logo__icon"></i>
+          <span>Dwello</span>
+        </a>
+        <p class="footer__desc">Bringing you closer to your dream home, one click at a time.</p>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">About</h4>
+        <ul class="footer__list">
+          <li><a href="../index.html#about" class="footer__link">Our Story</a></li>
+          <li><a href="agents.html" class="footer__link">Careers</a></li>
+          <li><a href="agents.html" class="footer__link">Our Team</a></li>
+          <li><a href="catalog.html" class="footer__link">Resources</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Support</h4>
+        <ul class="footer__list">
+          <li><a href="../index.html#contact" class="footer__link">FAQ</a></li>
+          <li><a href="../index.html#contact" class="footer__link">Contact Us</a></li>
+          <li><a href="../index.html#contact" class="footer__link">Help Center</a></li>
+          <li><a href="../index.html#contact" class="footer__link">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Find Us</h4>
+        <ul class="footer__list">
+          <li><a href="catalog.html" class="footer__link">Events</a></li>
+          <li><a href="catalog.html" class="footer__link">Locations</a></li>
+          <li><a href="../index.html#contact" class="footer__link">Newsletter</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Our Social</h4>
+        <ul class="footer__list">
+          <li>
+            <a href="#instagram" class="footer__link footer__social-link">
+              <img src="../img/instagram.png" alt="" class="footer__social-img" />
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a href="#facebook" class="footer__link footer__social-link">
+              <img src="../img/facebook.png" alt="" class="footer__social-img" />
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="#twitter" class="footer__link footer__social-link">
+              <img src="../img/twitterx.png" alt="" class="footer__social-img" />
+              <span>Twitter (x)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
